@@ -228,115 +228,116 @@ export default function Home() {
       {/* ================= R&D ================= */}
       <RnDSection />
 
+      
+
       {/* ================= STORY ================= */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="py-2 bg-[#ffffff]">
 
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0AA37F] via-[#0A6FA3] to-[#0024C3]" />
+  <div className="container-custom">
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.1),transparent)]" />
+    {/* CARD */}
+    <div className="relative rounded-3xl overflow-hidden">
 
-        {/* Content */}
-        <div className="container-custom relative grid md:grid-cols-2 items-center gap-16">
+      {/* Background (Apple-style split) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#e5e5e7] to-[#dbeafe]" />
 
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative flex justify-center md:justify-start"
-          >
-            <div className="absolute w-[350px] h-[350px] bg-white/10 blur-[100px] rounded-full" />
+      {/* Content */}
+      <div className="relative grid md:grid-cols-2 items-center px-8 md:px-14 py-12">
 
-            <motion.img
-              src="/founder.png"
-              className="relative w-[320px] md:w-[380px]"
-              animate={{ y: [-10, 10] }}
-              transition={{ duration: 6, repeat: Infinity, repeatType: "mirror" }}
-            />
-          </motion.div>
+        {/* LEFT TEXT */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-center md:text-left"
+        >
+          <p className="text-xs tracking-widest uppercase text-gray-500">
+            THE HELVICA STORY
+          </p>
 
-          {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white"
-          >
-            <p className="text-sm tracking-widest opacity-80">
-              THE HELVICA STORY
-            </p>
+          <h2 className="text-xl md:text-2xl font-semibold mt-4 leading-snug text-gray-900">
+            Driven by Science,
+            <br />
+            Inspired by Patients
+          </h2>
 
-            <h2 className="text-4xl md:text-5xl font-semibold mt-4">
-              Driven by Science,
-              <br />
-              Inspired by Patients
-            </h2>
+          <p className="mt-4 text-gray-600 text-sm md:text-base max-w-md">
+            Helvica Pharma has grown into a globally trusted pharmaceutical
+            company driven by innovation and patient-first values.
+          </p>
 
-            <p className="mt-6 text-white/80 max-w-lg">
-              Helvica Pharma has grown into a globally trusted pharmaceutical company driven by innovation and patient-first values.
-            </p>
+          <button className="mt-6 px-5 py-2.5 bg-black text-white rounded-full text-sm font-medium hover:opacity-90 transition">
+            Know More
+          </button>
+        </motion.div>
 
-            <button className="mt-8 px-6 py-3 bg-white text-[#0024C3] rounded-full">
-              Know More
-            </button>
-          </motion.div>
+        {/* RIGHT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          className="flex justify-center md:justify-end mt-10 md:mt-0"
+        >
+          <img
+            src="/founder.png"
+            alt="Founder"
+            className="w-[260px] md:w-[340px] object-contain"
+          />
+        </motion.div>
 
-        </div>
-      </section>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* ================= NEWS ================= */}
       <NewsSlider />
 
       {/* ================= CTA ================= */}
       {/* ================= CTA PREMIUM ================= */}
-<section className="relative py-32 overflow-hidden text-white">
+<section className="relative py-24 overflow-hidden">
 
   {/* ================= BACKGROUND ================= */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#0024C3] via-[#1a3cff] to-[#0048ff]" />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#1e3cff] via-[#2f49ff] to-[#4f6dff]" />
 
-  {/* Soft radial glow */}
-  <div className="absolute w-[500px] h-[500px] bg-white/10 blur-[120px] rounded-full top-[-100px] left-[20%]" />
-  <div className="absolute w-[400px] h-[400px] bg-cyan-400/10 blur-[120px] rounded-full bottom-[-100px] right-[20%]" />
-
-  {/* 🔥 ANIMATED BIO BACKGROUND */}
-  <BioBackground />
-
-  {/* Extra overlay (important for readability) */}
-  <div className="absolute inset-0 bg-black/20" />
+  {/* Optional soft overlay for depth */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
 
   {/* ================= CONTENT ================= */}
-  <div className="container-custom relative text-center">
+  <div className="max-w-7xl mx-auto px-6 md:px-10 relative grid md:grid-cols-2 items-center gap-12">
 
-    <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+    {/* LEFT CONTENT */}
+    <div className="text-white">
 
-      <p className="text-sm tracking-widest uppercase opacity-80 mb-4">
-        Global Partnership
-      </p>
-
-      <h2 className="text-4xl md:text-5xl font-semibold leading-tight">
-        Partner With Helvica Pharma
+      <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
+        Partner for a Healthier Future
       </h2>
 
-      <p className="mt-5 text-white/80 text-lg">
-        Collaborate with a globally trusted pharmaceutical company
-        committed to innovation, quality, and patient-first solutions.
+      <p className="mt-5 text-white/80 text-lg max-w-xl">
+        Collaborate with Helvica Pharma to improve healthcare outcomes,
+        drive innovation, and create meaningful global impact.
       </p>
 
-      <div className="mt-10 flex justify-center gap-4">
-        <Link href="/contact">
-          <button className="px-6 py-3 bg-white text-[#0024C3] rounded-full font-medium hover:scale-105 transition">
-            Contact Us
-          </button>
-        </Link>
-
-        <button className="px-6 py-3 border border-white/40 rounded-full hover:bg-white hover:text-[#0024C3] transition">
-          Learn More
+      <Link href="/contact">
+        <button className="mt-8 px-6 py-3 bg-white text-[#1e3cff] rounded-full font-medium hover:scale-105 transition">
+          Learn More About Us
         </button>
-      </div>
+      </Link>
 
-    </motion.div>
+    </div>
+
+    {/* RIGHT VISUAL */}
+    <div className="relative hidden md:block">
+
+      {/* Globe style visual */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-md" />
+
+      {/* Inner glow */}
+      <div className="absolute right-10 top-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-blue-300/20 blur-[80px]" />
+
+    </div>
+
   </div>
 
 </section>

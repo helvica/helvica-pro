@@ -1,11 +1,15 @@
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 export const metadata = {
   title: "Helvica Pharma",
   description: "Professional pharmaceutical company website",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
 };
+
+
 
 export default function RootLayout({
   children,
@@ -14,6 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      
+      
       <body>
 
         <Header />
@@ -25,6 +31,9 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        
+  <CookieBanner />
 
       </body>
     </html>
